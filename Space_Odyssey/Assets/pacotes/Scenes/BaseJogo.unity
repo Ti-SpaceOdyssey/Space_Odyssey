@@ -221,7 +221,6 @@ GameObject:
   m_Component:
   - component: {fileID: 272245981}
   - component: {fileID: 272245982}
-  - component: {fileID: 272245983}
   - component: {fileID: 272245984}
   m_Layer: 0
   m_Name: Background (1)
@@ -297,19 +296,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &272245983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272245980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: -10
 --- !u!114 &272245984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 278843664}
   - component: {fileID: 278843665}
-  - component: {fileID: 278843666}
   - component: {fileID: 278843667}
   m_Layer: 0
   m_Name: planet_blue (1)
@@ -410,19 +395,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &278843666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278843663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: -10
 --- !u!114 &278843667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,6 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572577388}
+  - component: {fileID: 572577389}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -665,6 +638,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572577389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572577387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 519420032}
+  background1: {fileID: 272245981}
+  background2: {fileID: 2061564552}
+  backgroundWidth: 2.6699293
 --- !u!1 &638400879
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distancia: -10
+  cameraTransform: {fileID: 0}
+  background1: {fileID: 0}
+  background2: {fileID: 0}
+  backgroundWidth: 0
 --- !u!212 &646896242
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -919,7 +911,6 @@ GameObject:
   m_Component:
   - component: {fileID: 884719991}
   - component: {fileID: 884719992}
-  - component: {fileID: 884719993}
   - component: {fileID: 884719994}
   m_Layer: 0
   m_Name: planet_pink (1)
@@ -995,19 +986,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &884719993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884719990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: -10
 --- !u!114 &884719994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distancia: -10
+  cameraTransform: {fileID: 0}
+  background1: {fileID: 0}
+  background2: {fileID: 0}
+  backgroundWidth: 0
 --- !u!114 &1449024509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1686388289}
   - component: {fileID: 1686388290}
-  - component: {fileID: 1686388291}
   - component: {fileID: 1686388292}
   m_Layer: 0
   m_Name: planet_blue (2)
@@ -1650,19 +1630,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1686388291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686388288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: -10
 --- !u!114 &1686388292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1727,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2061564552}
   - component: {fileID: 2061564553}
-  - component: {fileID: 2061564554}
   - component: {fileID: 2061564555}
   m_Layer: 0
   m_Name: Background (2)
@@ -1777,7 +1743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061564551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.08191705, z: 0}
+  m_LocalPosition: {x: -4.89, y: 0.08191705, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1836,19 +1802,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2061564554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061564551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde2e0080871c5e4dba2e31bb9b9ca51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancia: -10
 --- !u!114 &2061564555
 MonoBehaviour:
   m_ObjectHideFlags: 0
