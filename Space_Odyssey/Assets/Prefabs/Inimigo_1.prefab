@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8994676371147520085}
   - component: {fileID: 8994676371147520090}
   - component: {fileID: 1259865921967126808}
+  - component: {fileID: -7259852845842894174}
   m_Layer: 0
   m_Name: Inimigo_1
   m_TagString: Enemy
@@ -97,3 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7259852845842894174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994676371147520091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af59f0ce6087bf04594f24213d54ff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: {x: -1, y: 0}
+  movVel: 0.7

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4803391759584879966}
   - component: {fileID: 4803391759584879965}
+  - component: {fileID: -4599088341801556897}
   m_Layer: 0
   m_Name: Meteoro
   m_TagString: Enemy
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4803391759584879964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50.568, y: 3.037, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1656237137
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 55
   m_Sprite: {fileID: 21300000, guid: 5c769b33d11ce3f4b9be64af6b8c4fa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4599088341801556897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803391759584879964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af59f0ce6087bf04594f24213d54ff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: {x: 0.1, y: 1}
+  movVel: 1
