@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7528615789779674891}
   - component: {fileID: -5682591482034607877}
   - component: {fileID: 7662408116029045718}
+  - component: {fileID: 3750032670718023648}
   m_Layer: 0
   m_Name: Tiro
-  m_TagString: Untagged
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 10
 --- !u!114 &7662408116029045718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +135,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direcao: {x: 1, y: 0}
   movVel: 4
+--- !u!60 &3750032670718023648
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528615789779674888}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.19, y: 0.06}
+    newSize: {x: 0.19, y: 0.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.024898529, y: 0.029969692}
+      - {x: -0.024990082, y: 0.019836426}
+      - {x: -0.04491043, y: 0.019913435}
+      - {x: -0.044948578, y: 0.009926081}
+      - {x: -0.065, y: 0.010023145}
+      - {x: -0.06503937, y: 0.000013599172}
+      - {x: -0.084952086, y: -0.0000033564866}
+      - {x: -0.085019074, y: -0.009994058}
+      - {x: -0.06503677, y: -0.009960175}
+      - {x: -0.065029144, y: -0.020026207}
+      - {x: -0.02501297, y: -0.020062685}
+      - {x: -0.025089264, y: -0.029999256}
+      - {x: 0.08487579, y: -0.029958514}
+      - {x: 0.08475876, y: -0.019999027}
+      - {x: 0.094963074, y: -0.019927263}
+      - {x: 0.095, y: 0.03}
