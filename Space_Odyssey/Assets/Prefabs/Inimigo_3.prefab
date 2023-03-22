@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
+  explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
+  healthPoints: 2
 --- !u!114 &8908095356883167562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direcao: {x: -1, y: 0}
-  movVel: 0.7
+  movVel: 1
 --- !u!50 &5383717263455520810
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +148,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

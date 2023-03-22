@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class inimigo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject hitPrefab;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private GameObject explosaoPrefab;
+
+
+    [SerializeField]
+    private int healthPoints = 2;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Bala"))
+        {
+            // hit
+
+            Instantiate(hitPrefab, other.transform.position, hitPrefab.transform.rotation);
+            Destroy(other.gameObject);
+
+            // Update Health Points
+
+            healthPoints--;
+
+            // Se saude igual ou menor que 0 -> destruir
+
+            if (healthPoints <= 0)
+            {
+                Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
+        }
     }
 }
