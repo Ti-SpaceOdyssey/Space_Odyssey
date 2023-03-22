@@ -7,16 +7,29 @@ public class Player : MonoBehaviour
 {
 
     [Header("Movimentacao")]
-    [Range(0f,2f)]
+    [Range(0f, 2f)]
     [SerializeField]
     private float velocidadeMovimento = 1f;
 
 
 
+    [Header("Tiro")]
+    [SerializeField]
+    private Transform LugarTiro;
+
+    [SerializeField]
+    private GameObject prefabTiro;
+
+    [SerializeField]
+    private GameObject flashObject;
+
+    [SerializeField]
+    private float flashdelay = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
 
+        DesligarFlash();
     }
 
     // Update is called once per frame
@@ -24,17 +37,32 @@ public class Player : MonoBehaviour
     {
         Movimentacao();
 
-        areaPlayer();
+
+
+
+        Tiro();
 
 
     }
 
-    private void areaPlayer()
+    private void Tiro()
     {
+        if (!Input.GetButtonDown("Fire1"))
+        {
+            return;
+        }
 
-        
-
+        Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
+        flashObject.SetActive(true);
+        Invoke(nameof(DesligarFlash), flashdelay);
     }
+
+    private void DesligarFlash()
+    {
+        flashObject.SetActive(false);
+    }
+
+
 
     private void Movimentacao()
     {

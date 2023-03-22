@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7528615789779674890}
   - component: {fileID: 7528615789779674891}
   - component: {fileID: -5682591482034607877}
+  - component: {fileID: 7662408116029045718}
   m_Layer: 0
   m_Name: Tiro
   m_TagString: Untagged
@@ -118,3 +119,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7662408116029045718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528615789779674888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af59f0ce6087bf04594f24213d54ff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: {x: 1, y: 0}
+  movVel: 4
