@@ -209,7 +209,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &272245980
 GameObject:
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 346652029}
   - component: {fileID: 346652030}
   m_Layer: 0
-  m_Name: GerarInimigos
+  m_Name: GerarInimigos (1)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gerarPrefab: {fileID: 8931241235882002297, guid: 4fe254ea9c4d9a94394bc55a94f471af, type: 3}
   inicialDelay: 1
-  gerarDelay: 2.5
+  gerarDelay: 2
   limiteX:
     min: 0
     max: 0
@@ -675,7 +675,7 @@ Transform:
   - {fileID: 437765707}
   - {fileID: 1050259271}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &538841070
 MonoBehaviour:
@@ -850,7 +850,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646896239
 GameObject:
@@ -1438,7 +1438,6 @@ GameObject:
   - component: {fileID: 1622877486}
   - component: {fileID: 1622877488}
   - component: {fileID: 1622877487}
-  - component: {fileID: 1622877489}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1527,7 +1526,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b288724b236a148a8fdc06ea08c926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  spriteRenderer: {fileID: 1622877485}
+  moveUp: {fileID: -1678918526284878512, guid: 5181299c9dc64884490b6eca1f3ee731, type: 3}
+  moveRight: {fileID: -8420160177862423113, guid: 5181299c9dc64884490b6eca1f3ee731, type: 3}
+  moveDown: {fileID: -4850249988113459987, guid: 5181299c9dc64884490b6eca1f3ee731, type: 3}
   velocidadeMovimento: 0.9
   LugarTiro: {fileID: 1867403499}
   prefabTiro: {fileID: 7528615789779674888, guid: 4ed8cca64816a1b44aa28e81da026f71, type: 3}
@@ -1682,26 +1684,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &1622877489
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622877483}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2707e636428481248a0e388bad268ef0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1682548953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1814,59 @@ Transform:
   - {fileID: 1740487416}
   m_Father: {fileID: 1622877484}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1915158349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915158351}
+  - component: {fileID: 1915158350}
+  m_Layer: 0
+  m_Name: GerarInimigos (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1915158350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4403d4196a2c7134f826a7cde0808aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gerarPrefab: {fileID: 8994676371147520091, guid: e589612fa45f3b9469140a3bf2fc57c5, type: 3}
+  inicialDelay: 6.08
+  gerarDelay: 2.99
+  limiteX:
+    min: 0
+    max: 0
+  limiteY:
+    min: 0
+    max: 1
+--- !u!4 &1915158351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49, y: 2.396, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061564551
 GameObject:
