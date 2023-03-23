@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
-  healthPoints: 1
+  healthPoints: 5
 --- !u!114 &-7259852845842894174
 MonoBehaviour:
   m_ObjectHideFlags: 0

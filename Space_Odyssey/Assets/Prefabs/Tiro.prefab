@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
+  delay: 5
 --- !u!114 &7662408116029045718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direcao: {x: 1, y: 0}
-  movVel: 4
+  movVel: 3
 --- !u!60 &3750032670718023648
 PolygonCollider2D:
   m_ObjectHideFlags: 0
