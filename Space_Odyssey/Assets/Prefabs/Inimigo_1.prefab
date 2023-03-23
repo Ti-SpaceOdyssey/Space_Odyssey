@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8994676371147520091
+--- !u!1 &4333141659182034069
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8994676371147520085}
-  - component: {fileID: 8994676371147520090}
-  - component: {fileID: 1259865921967126808}
-  - component: {fileID: -7259852845842894174}
-  - component: {fileID: 3385053042687348858}
-  - component: {fileID: 8505657837984496325}
-  - component: {fileID: 1763857151712249343}
+  - component: {fileID: 234501073984327566}
+  - component: {fileID: 5876801995321659303}
+  - component: {fileID: 4131250388351056396}
+  - component: {fileID: 2788315930083159190}
+  - component: {fileID: 2764228970802775751}
+  - component: {fileID: 5493153014826472285}
+  - component: {fileID: 7177335547541883693}
+  - component: {fileID: 2984369721315438904}
   m_Layer: 0
   m_Name: Inimigo_1
   m_TagString: Enemy
@@ -22,28 +23,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8994676371147520085
+--- !u!4 &234501073984327566
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50.7695, y: 3.3175, z: 0}
   m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 219562045601002539}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8994676371147520090
+--- !u!212 &5876801995321659303
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,13 +91,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1259865921967126808
+--- !u!114 &4131250388351056396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
@@ -104,13 +106,13 @@ MonoBehaviour:
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
   healthPoints: 5
---- !u!114 &-7259852845842894174
+--- !u!114 &2788315930083159190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af59f0ce6087bf04594f24213d54ff4e, type: 3}
@@ -118,14 +120,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direcao: {x: -1, y: 0}
   movVel: 0.4
---- !u!50 &3385053042687348858
+--- !u!50 &2764228970802775751
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -139,13 +141,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &8505657837984496325
+--- !u!60 &5493153014826472285
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -224,18 +226,66 @@ PolygonCollider2D:
       - {x: 0.9349022, y: 0.15276241}
       - {x: 0.8460045, y: 0.22342706}
       - {x: 0.8435097, y: 0.437042}
---- !u!114 &1763857151712249343
+--- !u!114 &7177335547541883693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994676371147520091}
+  m_GameObject: {fileID: 4333141659182034069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
+  m_Script: {fileID: 11500000, guid: e1f0842beab0fb847bbd68f63f8e96db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LugarTiro: {fileID: 219562045601002539}
+  prefabTiro: {fileID: 5544745903647915443, guid: 439857446a85d214b9bb6909990f1c0a, type: 3}
+  flashObject: {fileID: 7981455322367928452, guid: ed40e572fe8e0c64dae38e672b352aae, type: 3}
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
-  healthPoints: 3
+  healthPoints: 10
+  tirodelay: 3
+--- !u!114 &2984369721315438904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333141659182034069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+--- !u!1 &5900680353576230686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219562045601002539}
+  m_Layer: 0
+  m_Name: AreaTiro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219562045601002539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900680353576230686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.185, y: 0.147, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 234501073984327566}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

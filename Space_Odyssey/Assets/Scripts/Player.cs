@@ -2,11 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
 
 
+
+    [SerializeField]
+    private GameObject hitPrefab;
+
+    [SerializeField]
+    private GameObject explosaoPrefab;
+
+
+    [SerializeField]
+    private int healthPoints = 2;
 
     [SerializeField]
     private SpriteRenderer spriteRenderer;
@@ -105,10 +116,35 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void colisaoInimigo(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // diminuir vida do player quando leva tiro, atualizar barra de vida
-        // quando vida == 0 -> finalizar jogo -->  abrir menu quer jogar dnv + pontuacao
-        // quando colide com meteoro vida == 0 
+        if (other.CompareTag("Enemy"))
+        {
+            // hit
+
+            Instantiate(hitPrefab, other.transform.position, hitPrefab.transform.rotation);
+            Destroy(other.gameObject);
+
+            // Update Health Points
+
+            healthPoints--;
+
+            // Se saude igual ou menor que 0 -> destruir
+
+            if (healthPoints <= 0)
+            {
+                Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+
+                TrocaTela();
+            }
+        }
+    }
+    private void TrocaTela()
+    {
+        //A tela de gamer over está na posição 2
+        SceneManager.LoadScene(2);
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8908095356883167562}
   - component: {fileID: 5383717263455520810}
   - component: {fileID: 6063480506233813566}
+  - component: {fileID: 3168784896060117868}
   m_Layer: 0
   m_Name: Inimigo_3
   m_TagString: Enemy
@@ -259,3 +260,16 @@ PolygonCollider2D:
       - {x: 0.28129578, y: 0.31197548}
       - {x: 0.28152466, y: 0.34347153}
       - {x: 0.31246948, y: 0.3435173}
+--- !u!114 &3168784896060117868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931241235882002297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4

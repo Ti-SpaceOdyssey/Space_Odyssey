@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4767946996844728321}
   - component: {fileID: 5695428451564340474}
   - component: {fileID: 7194436584179187921}
+  - component: {fileID: 4868425529581633419}
   m_Layer: 0
   m_Name: Meteoro
   m_TagString: Enemy
@@ -208,3 +209,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4868425529581633419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803391759584879964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905495a1648767f4aaf113763a4c4942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
