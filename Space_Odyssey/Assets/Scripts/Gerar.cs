@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Gerar : MonoBehaviour
 {
+    
     [Header("Prefab")]
     [SerializeField]
     private GameObject gerarPrefab;
