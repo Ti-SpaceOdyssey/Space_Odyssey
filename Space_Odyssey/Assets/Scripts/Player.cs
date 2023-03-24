@@ -3,10 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
 
+
+
+    [SerializeField]
+    private float healthMax = 10;
+
+    [SerializeField]
+    private Image healthBar;
 
 
     [SerializeField]
@@ -52,6 +60,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float flashdelay = 0.1f;
     // Start e chamado antes do update do primeiro frame
+
+
     void Start()
     {
 
@@ -127,8 +137,9 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
 
             // Update Health Points
-
             healthPoints--;
+            UpdateHealthBar();
+
 
             // Se saude igual ou menor que 0 -> destruir
 
@@ -147,4 +158,14 @@ public class Player : MonoBehaviour
         //A tela de gamer over está na posição 2
         SceneManager.LoadScene(2);
     }
+
+
+    private void UpdateHealthBar()
+    {
+        healthBar.fillAmount = healthPoints / healthMax;
+    }
+
 }
+
+
+
