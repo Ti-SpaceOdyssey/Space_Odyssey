@@ -5,9 +5,10 @@ using TMPro;
 
 public class Pontuacao : MonoBehaviour
 {
-
+    private static int recorde;
     private TextMeshProUGUI texto;
-    private static int pontos=0;
+    private TextMeshProUGUI texto2;
+    private static int pontos = 0;
 
     void Start()
     {
@@ -17,6 +18,13 @@ public class Pontuacao : MonoBehaviour
         texto = textoObjeto.GetComponent<TextMeshProUGUI>();
         // Atribua o texto inicial
         texto.text = "Pontos: " + pontos.ToString();
+
+        // Encontre o objeto com o componente TextMeshProUGUI
+        GameObject textoObjeto2 = GameObject.Find("Recorde");
+        // Atribua o componente TextMeshProUGUI à variável 'texto'
+        texto2 = textoObjeto2.GetComponent<TextMeshProUGUI>();
+        // Atribua o texto inicial
+        texto2.text = "Recorde: " + recorde.ToString();
     }
 
     void Update()
@@ -26,10 +34,7 @@ public class Pontuacao : MonoBehaviour
 
     public static int editPontos
     {
-        get
-        {
-            return pontos;
-        }
+        get { return pontos; }
         set
         {
             pontos = value;
@@ -38,7 +43,11 @@ public class Pontuacao : MonoBehaviour
                 pontos = 0;
             }
 
-            Debug.Log("Pontuação = " + pontos);
+            if (pontos > recorde)
+            {
+                recorde = pontos;
+                PlayerPrefs.SetInt("HighScore", recorde);
+            }
         }
     }
 }
