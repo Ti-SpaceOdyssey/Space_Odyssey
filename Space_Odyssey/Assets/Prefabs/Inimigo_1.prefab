@@ -244,7 +244,7 @@ MonoBehaviour:
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
   healthPoints: 10
-  tirodelay: 3
+  tirodelay: 2.5
 --- !u!114 &2984369721315438904
 MonoBehaviour:
   m_ObjectHideFlags: 0
