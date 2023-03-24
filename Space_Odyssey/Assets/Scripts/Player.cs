@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
 
 
     [SerializeField]
+    private float delayTiro = 0.5f; // Tempo de delay em segundos
+
+    private float tempoUltimoTiro = 0f;
+
+    [SerializeField]
     private float healthMax = 10;
 
     [SerializeField]
@@ -78,6 +83,7 @@ public class Player : MonoBehaviour
 
     }
 
+
     private void Tiro()
     {
         if (!Input.GetButtonDown("Fire1"))
@@ -85,10 +91,20 @@ public class Player : MonoBehaviour
             return;
         }
 
+        // Verifica se já passou tempo suficiente para atirar novamente
+        if (Time.time - tempoUltimoTiro < delayTiro)
+        {
+            return;
+        }
+
+        // Se pode atirar, atualiza o tempo do último tiro
+        tempoUltimoTiro = Time.time;
+
         Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
         flashObject.SetActive(true);
         Invoke(nameof(DesligarFlash), flashdelay);
     }
+
 
     private void DesligarFlash()
     {
@@ -129,7 +145,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro"))
         {
             // hit
 
@@ -148,6 +164,7 @@ public class Player : MonoBehaviour
                 Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
                 Destroy(other.gameObject);
                 Destroy(gameObject);
+
 
                 TrocaTela();
             }

@@ -61,7 +61,7 @@ public class InimigoTiro : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bala"))
+        if (other.CompareTag("Bala") && gameObject.tag == "EnemyTiro")
         {
             // hit
 
@@ -81,7 +81,8 @@ public class InimigoTiro : MonoBehaviour
                 Destroy(gameObject);
 
 
-                
+
+                Pontuacao.editPontos = Pontuacao.editPontos + 10;
             }
         }
     }

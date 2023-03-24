@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2984369721315438904}
   m_Layer: 0
   m_Name: Inimigo_1
-  m_TagString: Enemy
+  m_TagString: EnemyTiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,11 +239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LugarTiro: {fileID: 219562045601002539}
-  prefabTiro: {fileID: 5544745903647915443, guid: 439857446a85d214b9bb6909990f1c0a, type: 3}
+  prefabTiro: {fileID: 168199064472681911, guid: 6ccc735666d56ff49819492cb1a913ab, type: 3}
   flashObject: {fileID: 7981455322367928452, guid: ed40e572fe8e0c64dae38e672b352aae, type: 3}
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
-  healthPoints: 10
+  healthPoints: 7
   tirodelay: 2.5
 --- !u!114 &2984369721315438904
 MonoBehaviour:

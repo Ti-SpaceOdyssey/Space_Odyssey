@@ -14,7 +14,8 @@ public class inimigo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bala"))
+        
+        if (other.CompareTag("Bala") && gameObject.tag == "Enemy")
         {
             // hit
 
@@ -32,6 +33,8 @@ public class inimigo : MonoBehaviour
                 Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
                 Destroy(other.gameObject);
                 Destroy(gameObject);
+
+                Pontuacao.editPontos = Pontuacao.editPontos +  5;
             }
         }
     }
