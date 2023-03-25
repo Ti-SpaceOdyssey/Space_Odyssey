@@ -5,7 +5,7 @@ using TMPro;
 
 public class Pontuacao : MonoBehaviour
 {
-    private static int recorde;
+    private static int recorde= 0;
     private TextMeshProUGUI texto;
     private TextMeshProUGUI texto2;
     private static int pontos = 0;

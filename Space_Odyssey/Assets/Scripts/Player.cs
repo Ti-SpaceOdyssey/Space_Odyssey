@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
-
+    [SerializeField]
+    private ClipWithVolume tiroFx;
 
     [SerializeField]
     private float delayTiro = 0.5f; // Tempo de delay em segundos
@@ -21,13 +21,11 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Image healthBar;
 
-
     [SerializeField]
     private GameObject hitPrefab;
 
     [SerializeField]
     private GameObject explosaoPrefab;
-
 
     [SerializeField]
     private int healthPoints = 2;
@@ -44,13 +42,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Sprite moveDown;
 
-
     [Header("Movimentacao")]
     [Range(0f, 2f)]
     [SerializeField]
     private float velocidadeMovimento = 1f;
-
-
 
     [Header("Tiro")]
     [SerializeField]
@@ -64,12 +59,12 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float flashdelay = 0.1f;
+
     // Start e chamado antes do update do primeiro frame
 
 
     void Start()
     {
-
         DesligarFlash();
     }
 
@@ -78,11 +73,7 @@ public class Player : MonoBehaviour
     {
         Movimentacao();
         Tiro();
-
-
-
     }
-
 
     private void Tiro()
     {
@@ -100,17 +91,16 @@ public class Player : MonoBehaviour
         // Se pode atirar, atualiza o tempo do último tiro
         tempoUltimoTiro = Time.time;
 
+        AudioManager.Play(tiroFx);
         Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
         flashObject.SetActive(true);
         Invoke(nameof(DesligarFlash), flashdelay);
     }
 
-
     private void DesligarFlash()
     {
         flashObject.SetActive(false);
     }
-
 
     private void Movimentacao()
     {
@@ -142,7 +132,6 @@ public class Player : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro"))
@@ -156,33 +145,31 @@ public class Player : MonoBehaviour
             healthPoints--;
             UpdateHealthBar();
 
-
             // Se saude igual ou menor que 0 -> destruir
 
             if (healthPoints <= 0)
             {
-                Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
+                Instantiate(
+                    explosaoPrefab,
+                    other.transform.position,
+                    explosaoPrefab.transform.rotation
+                );
                 Destroy(other.gameObject);
                 Destroy(gameObject);
-
 
                 TrocaTela();
             }
         }
     }
+
     private void TrocaTela()
     {
         //A tela de gamer over está na posição 2
         SceneManager.LoadScene(2);
     }
 
-
     private void UpdateHealthBar()
     {
         healthBar.fillAmount = healthPoints / healthMax;
     }
-
 }
-
-
-
