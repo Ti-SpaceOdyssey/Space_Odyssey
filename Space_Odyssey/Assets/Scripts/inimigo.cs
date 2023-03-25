@@ -3,18 +3,19 @@ using UnityEngine;
 public class inimigo : MonoBehaviour
 {
     [SerializeField]
+    private ClipWithVolume hitFx;
+
+    [SerializeField]
     private GameObject hitPrefab;
 
     [SerializeField]
     private GameObject explosaoPrefab;
-
 
     [SerializeField]
     private int healthPoints = 2;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
         if (other.CompareTag("Bala") && gameObject.tag == "Enemy")
         {
             // hit
@@ -30,11 +31,12 @@ public class inimigo : MonoBehaviour
 
             if (healthPoints <= 0)
             {
-                Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
-                Destroy(other.gameObject);
+
+                ControleExplosao.Instance.Create(transform.position, transform.rotation);
+
                 Destroy(gameObject);
 
-                Pontuacao.editPontos = Pontuacao.editPontos +  5;
+                Pontuacao.editPontos = Pontuacao.editPontos + 5;
             }
         }
     }

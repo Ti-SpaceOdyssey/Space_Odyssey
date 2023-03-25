@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InimigoTiro : MonoBehaviour
 {
-
-
     [Header("Tiro")]
     [SerializeField]
     private Transform LugarTiro;
@@ -22,36 +20,26 @@ public class InimigoTiro : MonoBehaviour
     [SerializeField]
     private GameObject explosaoPrefab;
 
-
     [SerializeField]
     private int healthPoints = 2;
-
-
 
     [SerializeField]
     private float tirodelay = 3f;
 
     private bool canShoot = true;
 
-
-
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    void Start() { }
 
     // Update is called once per frame
     void Update()
     {
-
         if (canShoot)
         {
             InvokeRepeating(nameof(Tiro), tirodelay, tirodelay);
             canShoot = false;
         }
     }
-
 
     private void Tiro()
     {
@@ -76,11 +64,8 @@ public class InimigoTiro : MonoBehaviour
 
             if (healthPoints <= 0)
             {
-                Instantiate(explosaoPrefab, other.transform.position, explosaoPrefab.transform.rotation);
-                Destroy(other.gameObject);
+                ControleExplosao.Instance.Create(transform.position, transform.rotation);
                 Destroy(gameObject);
-
-
 
                 Pontuacao.editPontos = Pontuacao.editPontos + 10;
             }
@@ -91,5 +76,4 @@ public class InimigoTiro : MonoBehaviour
     {
         CancelInvoke();
     }
-
 }
