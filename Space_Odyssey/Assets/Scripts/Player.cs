@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float flashdelay = 0.1f;
 
-    private Recorde recorde;
+
     // Start e chamado antes do update do primeiro frame
 
 
