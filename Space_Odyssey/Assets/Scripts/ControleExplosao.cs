@@ -8,6 +8,7 @@ public class ClipWithVolume
 
     [Range(0, 1)]
     public float volume = 0.2f;
+    
 }
 
 public class ControleExplosao : MonoBehaviour

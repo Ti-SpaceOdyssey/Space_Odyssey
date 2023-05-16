@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         DesligarFlash();
+        
     }
 
     // Update é chamado uma vez por frame
@@ -91,6 +92,7 @@ public class Player : MonoBehaviour
 
         // Se pode atirar, atualiza o tempo do último tiro
         tempoUltimoTiro = Time.time;
+    
 
         AudioManager.Play(tiroFx);
         Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);

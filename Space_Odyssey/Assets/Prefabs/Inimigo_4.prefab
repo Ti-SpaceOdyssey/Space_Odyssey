@@ -98,6 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitFx:
+    clip: {fileID: 0}
+    volume: 0.2
+  hitPrefab: {fileID: 0}
+  explosaoPrefab: {fileID: 0}
+  healthPoints: 2
 --- !u!114 &-6989556488425611082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,4 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direcao: {x: -1, y: 0}
-  movVel: 0.7
+  movVel: 0.2

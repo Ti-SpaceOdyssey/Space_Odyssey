@@ -19,6 +19,8 @@ public class Recorde : MonoBehaviour
     public int retornarMaiorValor()
     {
         return currentMaiorValor;
+
+    
     }
 
     IEnumerator GetMaiorValor()
