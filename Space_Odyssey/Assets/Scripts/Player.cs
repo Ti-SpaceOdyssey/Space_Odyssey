@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro"))
+        if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro") || other.CompareTag("Meteoro"))
         {
             // hit
 
@@ -159,12 +159,6 @@ public class Player : MonoBehaviour
                 Destroy(gameObject);
 
                 StartCoroutine(Recorde.SetMaiorValor(Pontuacao.pontos));
-
-                               
-
-
-                
-                
 
                 TrocaTela();
             }

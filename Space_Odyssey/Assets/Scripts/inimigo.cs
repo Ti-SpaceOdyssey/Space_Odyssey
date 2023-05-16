@@ -16,7 +16,7 @@ public class inimigo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bala") && gameObject.tag == "Enemy")
+        if (other.CompareTag("Bala") && gameObject.tag == "Enemy" || other.CompareTag("Meteoro") && gameObject.tag == "Enemy" || other.CompareTag("Bala") && gameObject.tag == "Meteoro")
         {
             // hit
 

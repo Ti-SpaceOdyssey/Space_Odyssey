@@ -49,7 +49,7 @@ public class InimigoTiro : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bala") && gameObject.tag == "EnemyTiro")
+        if (other.CompareTag("Bala") && gameObject.tag == "EnemyTiro" || other.CompareTag("Meteoro") && gameObject.tag == "EnemyTiro")
         {
             // hit
 

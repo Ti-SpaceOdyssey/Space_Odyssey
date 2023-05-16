@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4868425529581633419}
   m_Layer: 0
   m_Name: Meteoro
-  m_TagString: Enemy
+  m_TagString: Meteoro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df6108a17e326649880fa4302d9e39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitFx:
+    clip: {fileID: 0}
+    volume: 0.2
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
   healthPoints: 3
