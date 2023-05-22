@@ -18,6 +18,5 @@ public class GirarTiro : MonoBehaviour
     void Update()
     {
         transform.Rotate(0,0,velocidade * Time.deltaTime);
-        
     }
 }

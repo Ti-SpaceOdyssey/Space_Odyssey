@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public int coins; 
+
     [SerializeField]
     private ClipWithVolume tiroFx;
 
@@ -60,6 +62,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float flashdelay = 0.1f;
 
+    private CoinManager coinManager;
+    private bool canSpawnCoin = true;
+
 
     // Start e chamado antes do update do primeiro frame
 
@@ -67,7 +72,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         DesligarFlash();
-        
+        coinManager = FindObjectOfType<CoinManager>();
+        SpawnCoin();
     }
 
     // Update é chamado uma vez por frame
@@ -92,7 +98,6 @@ public class Player : MonoBehaviour
 
         // Se pode atirar, atualiza o tempo do último tiro
         tempoUltimoTiro = Time.time;
-    
 
         AudioManager.Play(tiroFx);
         Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
@@ -135,8 +140,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void SpawnCoin()
+    {
+        if (canSpawnCoin)
+        {
+            coinManager.SpawnCoin();
+            canSpawnCoin = false; // Impede a geração de novas moedas até que a atual seja coletada
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "coins")
+        {
+            Destroy(other.gameObject);
+            coins++;
+
+            canSpawnCoin = true; // Permite gerar uma nova moeda
+
+        }
         if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro") || other.CompareTag("Meteoro"))
         {
             // hit
@@ -165,6 +187,7 @@ public class Player : MonoBehaviour
                 TrocaTela();
             }
         }
+
     }
 
     private void TrocaTela()

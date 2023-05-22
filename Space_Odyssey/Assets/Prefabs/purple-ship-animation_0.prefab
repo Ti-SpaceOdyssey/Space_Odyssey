@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5602545323277716083}
   - component: {fileID: 836255714558873742}
   - component: {fileID: 849569851191392607}
-  - component: {fileID: 3090335802822618884}
   m_Layer: 0
   m_Name: purple-ship-animation_0
   m_TagString: Untagged
@@ -196,22 +195,3 @@ PolygonCollider2D:
       - {x: 0.59424716, y: -0.21570946}
       - {x: 0.62689215, y: -0.21745223}
       - {x: 0.6252972, y: -0.15306011}
---- !u!114 &3090335802822618884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4244548217080101624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6331f923e08bd841bdcbcba126d4e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LugarTiro: {fileID: 0}
-  prefabTiro: {fileID: 0}
-  flashObject: {fileID: 0}
-  hitPrefab: {fileID: 0}
-  explosaoPrefab: {fileID: 0}
-  healthPoints: 2
-  tirodelay: 3

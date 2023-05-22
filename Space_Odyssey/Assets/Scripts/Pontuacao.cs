@@ -52,7 +52,6 @@ public class Pontuacao : MonoBehaviour
             if (pontos > recorde)
             {
                 recorde = pontos;
-                
                 PlayerPrefs.SetInt("HighScore", recorde);
             }
         }
