@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Boss : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class Boss : MonoBehaviour
 
     private bool canShoot = true;
 
+
+
+
     // Start is called before the first frame update
     void Start() { }
 
@@ -43,7 +47,22 @@ public class Boss : MonoBehaviour
 
     private void Tiro()
     {
-        Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
+        GameObject novoTiro = Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
+        AIPath aiPath = novoTiro.AddComponent<AIPath>();
+        aiPath.orientation = OrientationMode.YAxisForward;
+        aiPath.gravity = Vector3.zero; // Remover a gravidade
+        aiPath.radius = 0.08f; //0.04f
+        aiPath.maxSpeed = 1.15f;
+        aiPath.pickNextWaypointDist = 1f; //0.01f;
+        aiPath.endReachedDistance = 0.1f;
+
+        GameObject playerGameObject = GameObject.Find("Player");
+        if (playerGameObject != null)
+        {
+            Transform playerTransform = playerGameObject.transform;
+            AIDestinationSetter aiDestinationSetter = novoTiro.AddComponent<AIDestinationSetter>();
+            aiDestinationSetter.target = playerTransform;
+        }
         flashObject.SetActive(true);
     }
 

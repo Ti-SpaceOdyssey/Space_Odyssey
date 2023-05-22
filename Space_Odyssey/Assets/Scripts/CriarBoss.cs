@@ -8,7 +8,7 @@ public class CriarBoss : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(GerarBoss), 12f, 12f); // Chama o método GerarBoss a cada 2 minutos
+        InvokeRepeating(nameof(GerarBoss), 2f, 60f); // Chama o método GerarBoss a cada 2 minutos
     }
 
     private void GerarBoss()
@@ -18,6 +18,8 @@ public class CriarBoss : MonoBehaviour
             Debug.Log("Ainda há um boss ativo. Não é possível gerar outro boss.");
             return;
         }
+
+        bossPrefab.layer = 6;
 
         Instantiate(bossPrefab, transform.position, transform.rotation);
         Gerar.bossCriado = true; // Atualiza a variável para desativar a geração de inimigos em todos os objetos Gerar

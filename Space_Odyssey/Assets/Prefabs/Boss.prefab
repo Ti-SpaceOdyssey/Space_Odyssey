@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9080460899154802636}
   - component: {fileID: 9080460899154802635}
   - component: {fileID: 9080460899154802634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LugarTiro: {fileID: 9080460898680975575}
-  prefabTiro: {fileID: 168199064472681911, guid: 6ccc735666d56ff49819492cb1a913ab, type: 3}
+  prefabTiro: {fileID: 168199064472681911, guid: 64a1946a8defcd6499a52a268d617485, type: 3}
   flashObject: {fileID: 7981455322367928452, guid: ed40e572fe8e0c64dae38e672b352aae, type: 3}
   hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
   explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
-  healthPoints: 2
-  tirodelay: 3
+  healthPoints: 50
+  tirodelay: 1.65
