@@ -20,6 +20,9 @@
 # Visual Studio cache directory
 .vs/
 
+# Google Drive 
+desktop.ini
+
 # Gradle cache directory
 .gradle/
 

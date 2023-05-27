@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public int coins; 
+    private float originalDelayTiro;
 
     [SerializeField]
     private ClipWithVolume tiroFx;
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
     {
         DesligarFlash();
         coinManager = FindObjectOfType<CoinManager>();
-        SpawnCoin();
+
     }
 
     // Update é chamado uma vez por frame
@@ -149,14 +150,35 @@ public class Player : MonoBehaviour
         }
     }
 
+    private IEnumerator RestaurarDelayTiro(float delay)
+{
+    yield return new WaitForSeconds(delay); // Espera o tempo desejado
+
+    delayTiro = originalDelayTiro; // Restaura o valor original do delayTiro
+}
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "coins")
         {
             Destroy(other.gameObject);
-            coins++;
-
+            Pontuacao.pontos+=5;
             canSpawnCoin = true; // Permite gerar uma nova moeda
+
+        }
+        if (other.gameObject.tag == "life")
+        {
+            Destroy(other.gameObject);
+            healthPoints+=2;
+            UpdateHealthBar();
+
+        }
+        if (other.gameObject.tag == "balas")
+        {
+            Destroy(other.gameObject);
+            originalDelayTiro = delayTiro; // Armazena o valor original do delayTiro
+            delayTiro -= 0.5f; // Altera o delayTiro
+            StartCoroutine(RestaurarDelayTiro(15f)); // Chama a rotina para restaurar o valor após 15 segundos
 
         }
         if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro") || other.CompareTag("Meteoro"))
