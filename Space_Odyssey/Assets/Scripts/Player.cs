@@ -177,8 +177,8 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             originalDelayTiro = delayTiro; // Armazena o valor original do delayTiro
-            delayTiro -= 0.5f; // Altera o delayTiro
-            StartCoroutine(RestaurarDelayTiro(15f)); // Chama a rotina para restaurar o valor após 15 segundos
+            delayTiro -= 0.35f; // Altera o delayTiro
+            StartCoroutine(RestaurarDelayTiro(5f)); // Chama a rotina para restaurar o valor após 15 segundos
 
         }
         if (other.CompareTag("Enemy") || other.CompareTag("EnemyTiro") || other.CompareTag("Meteoro"))
