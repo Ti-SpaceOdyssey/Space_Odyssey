@@ -41,9 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9080460899154802638}
   - component: {fileID: 9080460899154802637}
+  - component: {fileID: 9080460899154802634}
   - component: {fileID: 9080460899154802636}
   - component: {fileID: 9080460899154802635}
-  - component: {fileID: 9080460899154802634}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Boss
@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 9080460899154802633}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 48.9961, y: 3.1589513, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2652, y: 1.2652, z: 1.2652}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9080460898680975575}
@@ -119,6 +119,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9080460899154802634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080460899154802633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6331f923e08bd841bdcbcba126d4e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LugarTiro: {fileID: 9080460898680975575}
+  prefabTiro: {fileID: 168199064472681911, guid: 64a1946a8defcd6499a52a268d617485, type: 3}
+  flashObject: {fileID: 7981455322367928452, guid: ed40e572fe8e0c64dae38e672b352aae, type: 3}
+  hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
+  explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
+  healthPoints: 50
+  tirodelay: 1.65
 --- !u!50 &9080460899154802636
 Rigidbody2D:
   serializedVersion: 4
@@ -228,22 +247,3 @@ PolygonCollider2D:
       - {x: 0.59424716, y: -0.21570946}
       - {x: 0.62689215, y: -0.21745223}
       - {x: 0.6252972, y: -0.15306011}
---- !u!114 &9080460899154802634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9080460899154802633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6331f923e08bd841bdcbcba126d4e3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LugarTiro: {fileID: 9080460898680975575}
-  prefabTiro: {fileID: 168199064472681911, guid: 64a1946a8defcd6499a52a268d617485, type: 3}
-  flashObject: {fileID: 7981455322367928452, guid: ed40e572fe8e0c64dae38e672b352aae, type: 3}
-  hitPrefab: {fileID: 4623179126930355825, guid: fe67f8f4bf81e94488366826f38e3d15, type: 3}
-  explosaoPrefab: {fileID: 4266665428144878004, guid: 27946827b89f4344198eab82cfb53531, type: 3}
-  healthPoints: 50
-  tirodelay: 1.65

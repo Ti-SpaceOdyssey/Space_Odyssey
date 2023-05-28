@@ -48,13 +48,18 @@ public class Boss : MonoBehaviour
     private void Tiro()
     {
         GameObject novoTiro = Instantiate(prefabTiro, LugarTiro.position, LugarTiro.rotation);
+
+        //A*
         AIPath aiPath = novoTiro.AddComponent<AIPath>();
         aiPath.orientation = OrientationMode.YAxisForward;
         aiPath.gravity = Vector3.zero; // Remover a gravidade
-        aiPath.radius = 0.08f; //0.04f
-        aiPath.maxSpeed = 1.15f;
-        aiPath.pickNextWaypointDist = 1f; //0.01f;
+        aiPath.radius = 0.08f;
+        aiPath.maxSpeed = 0.90f;
+        aiPath.pickNextWaypointDist = 2f; //1f;
         aiPath.endReachedDistance = 0.1f;
+        aiPath.maxAcceleration = 10f;
+        aiPath.whenCloseToDestination = CloseToDestinationMode.ContinueToExactDestination;
+        aiPath.slowdownDistance = 0f;
 
         GameObject playerGameObject = GameObject.Find("Player");
         if (playerGameObject != null)

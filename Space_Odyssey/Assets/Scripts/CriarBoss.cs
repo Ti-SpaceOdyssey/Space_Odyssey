@@ -8,7 +8,7 @@ public class CriarBoss : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(GerarBoss), 2f, 60f); // Chama o método GerarBoss a cada 2 minutos
+        InvokeRepeating(nameof(GerarBoss), 2f, 12f); // Chama o método GerarBoss a cada 2 minutos
     }
 
     private void GerarBoss()
