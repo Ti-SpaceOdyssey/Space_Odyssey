@@ -210,6 +210,26 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (other.CompareTag("Boss") )
+        {      
+            healthPoints = 0;
+            UpdateHealthBar();
+
+            Instantiate(
+                explosaoPrefab,
+                other.transform.position,
+                explosaoPrefab.transform.rotation
+            );
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+
+            StartCoroutine(Recorde.SetMaiorValor(Pontuacao.pontos));
+
+            TrocaTela();
+                   
+
+        }
+
     }
 
     private void TrocaTela()
